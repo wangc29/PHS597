@@ -1,9 +1,9 @@
-#+----------------------------+
-#|PHS597 assignment1          |
-#|                            |
-#|Author:	Chen Wang           |
-#|Date:		Sept. 6th,2020      |
-#+----------------------------+
+#+------------------------------+
+#|PHS597 assignment1          	|
+#|                            	|
+#|Author:	Chen Wang	|
+#|Date:		0906,2020      	|
+#+------------------------------+
 
 library(MASS)
 ###simulate data
