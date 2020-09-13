@@ -5,7 +5,6 @@
 #|Date:   0912,2020             |
 #+------------------------------+
 
-
 ##Implentation of a lasso solver with cyclic coordinate descent 
 library(glmnet)
 #simulate data
@@ -15,9 +14,6 @@ set.seed(100)
 mu.x<-c(2,3,4)
 cov.x.mat<-matrix(c(3,1,1,1,4,1,1,1,5),ncol = 3)
 X<-mvrnorm(n=30,mu = mu.x,Sigma = cov.x.mat)
-x1<-X[,1]
-x2<-X[,2]
-x3<-X[,3]
 y<-rnorm(30,5,2)
 ##define the soft thresholding function
 soft_thres_func<-function(lambda,z,var.x){
@@ -58,6 +54,6 @@ lasso.solver(y = y,x.mat = X,lambda = 0.1)
 fit.lasso <- glmnet(x = X, y = y,alpha = 1,lambda = 0.1,standardize = F)
 c(fit.lasso$a0,as.numeric(fit.lasso$beta))
 
-lasso.solver(y = y,x.mat = X,lambda = 0.5)
-fit.lasso2 <- glmnet(x = X, y = y,alpha = 1,lambda = 1,standardize = F)
+lasso.solver(y = y,intercept = F,x.mat = X,lambda = 0.5)
+fit.lasso2 <- glmnet(x = X, y = y,intercept = F,alpha = 0.5,lambda = 1,standardize = F)
 c(fit.lasso2$a0,as.numeric(fit.lasso2$beta))
