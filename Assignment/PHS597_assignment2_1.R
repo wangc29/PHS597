@@ -1,8 +1,8 @@
 #+------------------------------+
-#|PHS597 assignment2            |
+#|PHS597 assignment2_1          |
 #|                              |
 #|Author: Chen Wang             |
-#|Date:   0912,2020             |
+#|Date:   0913,2020             |
 #+------------------------------+
 
 ##Implentation of a lasso solver with cyclic coordinate descent 
